@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        xmlns:f="http://java.sun.com/jsf/core" 
+    </h:head>
+    <h:body>
+        <h:form>
+    <h:panelGrid columns="2">
+    <h:inputText value="#{ejemploController.cadenaBusqueda}"/>
+    <h:commandButton value="Buscar" action="#{ejemploController.doBuscarCliente}" />
+    <h:commandLink value="Nuevo cliente" action="#{ejemploController.doNuevoCliente}" />
+    </h:panelGrid>
+    <h1><h:outputText value="Listado"/></h1>
+    <h:dataTable value="#{ejemploController.listaClientes}" var="cliente"
+    border="0" cellpadding="4" cellspacing="0" rules="all" >
+
+    </h:dataTable>
+    </h:form>
+        
+        
+    </h:body>
+</html>
+
